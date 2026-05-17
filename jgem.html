@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JGem Studio Co. | Artisanal Jewelry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream: #FDFBF9;
+            --gold: #D4AF37;
+            --dark: #2D2D2D;
+            --soft-nude: #F4ECE4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            letter-spacing: 3px;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            margin-left: 35px;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background-color: var(--soft-nude);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero p {
+            letter-spacing: 5px;
+            font-size: 0.7rem;
+            margin-bottom: 15px;
+            color: #888;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 400;
+            margin-bottom: 30px;
+            max-width: 800px;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            border: 1px solid var(--dark);
+            background: transparent;
+            color: var(--dark);
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            transition: 0.4s ease;
+        }
+
+        .btn:hover {
+            background: var(--dark);
+            color: white;
+        }
+
+        /* Product Grid */
+        .container {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+        }
+
+        .card {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .image-box {
+            background: #EAEAEA;
+            aspect-ratio: 1/1;
+            margin-bottom: 20px;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-style: italic;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .card h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .buy-link {
+            font-size: 0.7rem;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--gold);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">JGEM STUDIO CO.</div>
+        <div class="nav-links">
+            <a href="#">Collections</a>
+            <a href="#">Bespoke</a>
+            <a href="#">Story</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <p>ARTISAN GEMSTONES</p>
+        <h1>Little pieces of your story, handcrafted with intent.</h1>
+        <a href="#shop" class="btn">SHOP THE EDIT</a>
+    </header>
+
+    <main class="container" id="shop">
+        <h2 class="section-title">The Gemstone Collection</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="image-box">Rose Princess Bracelet</div>
+                <h3>Rose Princess</h3>
+                <p>₱299.00</p>
+                <a href="#" class="buy-link">ENQUIRE VIA GCASH</a>
+            </div>
+            <div class="card">
+                <div class="image-box">Golden Camellia Strap</div>
+                <h3>Golden Camellia</h3>
+                <p>₱349.00</p>
+                <a href="#" class="buy-link">ENQUIRE VIA GCASH</a>
+            </div>
+            <div class="card">
+                <div class="image-box">Artisanal Phone Strap</div>
+                <h3>Flora Strap</h3>
+                <p>₱280.00</p>
+                <a href="#" class="buy-link">ENQUIRE VIA GCASH</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <span class="footer-logo">JGEM STUDIO CO.</span>
+        <p style="font-size: 0.7rem; color: #888;">&copy; 2026 Crafted by 08Sebastian. Built for the Modern Maison.</p>
+    </footer>
+
+</body>
+</html>
