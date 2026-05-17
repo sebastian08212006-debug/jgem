@@ -8,10 +8,12 @@
 
     <style>
         :root {
-            --cream: #FDFBF9;
-            --gold: #D4AF37;
-            --dark: #2D2D2D;
-            --soft-nude: #F4ECE4;
+            /* JGem Specific Palette */
+            --brand-beige: #F9F4F0;   /* Soft background like their IG highlights */
+            --brand-pink: #EED7D1;    /* Muted Rose for buttons/accents */
+            --brand-gold: #C5A059;    /* Refined gold (not too bright) */
+            --brand-dark: #3E3636;    /* Warm charcoal for text */
+            --white: #FFFFFF;
         }
 
         * {
@@ -22,210 +24,193 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: var(--cream);
-            color: var(--dark);
+            background-color: var(--brand-beige);
+            color: var(--brand-dark);
             line-height: 1.6;
         }
 
-        /* Navigation */
+        /* Sophisticated Navigation */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 8%;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
+            padding: 20px 8%;
+            background: rgba(249, 244, 240, 0.9);
+            backdrop-filter: blur(8px);
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            letter-spacing: 3px;
-            font-weight: 500;
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+            font-weight: 400;
+            color: var(--brand-dark);
         }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--dark);
-            margin-left: 35px;
-            font-size: 0.75rem;
+            color: var(--brand-dark);
+            margin-left: 30px;
+            font-size: 0.7rem;
             letter-spacing: 2px;
             text-transform: uppercase;
-            transition: 0.3s;
         }
 
-        .nav-links a:hover {
-            color: var(--gold);
-        }
-
-        /* Hero Section */
+        /* Soft Luxe Hero */
         .hero {
-            height: 80vh;
-            background-color: var(--soft-nude);
+            height: 75vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 20px;
+            background: linear-gradient(to bottom, #F9F4F0, #EED7D1);
         }
 
         .hero p {
-            letter-spacing: 5px;
-            font-size: 0.7rem;
-            margin-bottom: 15px;
-            color: #888;
+            letter-spacing: 6px;
+            font-size: 0.65rem;
+            margin-bottom: 20px;
+            color: var(--brand-gold);
+            font-weight: 500;
         }
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 400;
-            margin-bottom: 30px;
-            max-width: 800px;
+            font-style: italic;
+            margin-bottom: 35px;
+            color: var(--brand-dark);
         }
 
         .btn {
-            padding: 18px 40px;
-            border: 1px solid var(--dark);
-            background: transparent;
-            color: var(--dark);
+            padding: 15px 45px;
+            background: var(--white);
+            border: 1px solid var(--brand-gold);
+            color: var(--brand-dark);
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             letter-spacing: 2px;
-            transition: 0.4s ease;
+            transition: all 0.4s ease;
         }
 
         .btn:hover {
-            background: var(--dark);
-            color: white;
+            background: var(--brand-pink);
+            border-color: var(--brand-pink);
+            letter-spacing: 4px;
         }
 
-        /* Product Grid */
+        /* Gemstone Grid */
         .container {
-            padding: 80px 8%;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 50px;
+            padding: 100px 8%;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
         }
 
         .card {
             text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
         }
 
         .image-box {
-            background: #EAEAEA;
+            background: var(--white);
             aspect-ratio: 1/1;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             border-radius: 2px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #999;
+            color: #C1B5B1;
             font-style: italic;
-            border: 1px solid rgba(0,0,0,0.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+            border: 1px solid #F0E6E1;
         }
 
         .card h3 {
             font-family: 'Playfair Display', serif;
-            font-weight: 500;
-            margin-bottom: 5px;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            font-weight: 400;
         }
 
         .card p {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .buy-link {
-            font-size: 0.7rem;
-            color: var(--gold);
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 1px;
-            border-bottom: 1px solid var(--gold);
-        }
-
-        /* Footer */
-        footer {
-            background: #1a1a1a;
-            color: white;
-            padding: 60px 8%;
-            text-align: center;
-        }
-
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
+            font-size: 0.85rem;
+            color: var(--brand-gold);
             margin-bottom: 20px;
-            display: block;
+            font-weight: 500;
+        }
+
+        .shop-btn {
+            font-size: 0.7rem;
+            color: var(--brand-dark);
+            text-decoration: none;
+            letter-spacing: 1.5px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--brand-pink);
+            transition: 0.3s;
+        }
+
+        .shop-btn:hover {
+            border-bottom: 1px solid var(--brand-gold);
+        }
+
+        footer {
+            padding: 80px 8%;
+            text-align: center;
+            background: var(--white);
+            border-top: 1px solid var(--brand-beige);
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">JGEM STUDIO CO.</div>
+        <div class="logo">JGEM STUDIO</div>
         <div class="nav-links">
-            <a href="#">Collections</a>
-            <a href="#">Bespoke</a>
-            <a href="#">Story</a>
+            <a href="#">The Shop</a>
+            <a href="#">Gem Guide</a>
+            <a href="#">About</a>
         </div>
     </nav>
 
     <header class="hero">
-        <p>ARTISAN GEMSTONES</p>
-        <h1>Little pieces of your story, handcrafted with intent.</h1>
-        <a href="#shop" class="btn">SHOP THE EDIT</a>
+        <p>ARTISAN GEMSTONE JEWELRY</p>
+        <h1>Little places of your story, <br>curated for you.</h1>
+        <a href="#shop" class="btn">VIEW EDITS</a>
     </header>
 
     <main class="container" id="shop">
-        <h2 class="section-title">The Gemstone Collection</h2>
         <div class="grid">
             <div class="card">
-                <div class="image-box">Rose Princess Bracelet</div>
+                <div class="image-box">Rose Princess</div>
                 <h3>Rose Princess</h3>
                 <p>₱299.00</p>
-                <a href="#" class="buy-link">ENQUIRE VIA GCASH</a>
+                <a href="#" class="shop-btn">INQUIRE ON GCASH</a>
             </div>
             <div class="card">
-                <div class="image-box">Golden Camellia Strap</div>
+                <div class="image-box">Golden Camellia</div>
                 <h3>Golden Camellia</h3>
                 <p>₱349.00</p>
-                <a href="#" class="buy-link">ENQUIRE VIA GCASH</a>
+                <a href="#" class="shop-btn">INQUIRE ON GCASH</a>
             </div>
             <div class="card">
-                <div class="image-box">Artisanal Phone Strap</div>
+                <div class="image-box">Phone Straps</div>
                 <h3>Flora Strap</h3>
                 <p>₱280.00</p>
-                <a href="#" class="buy-link">ENQUIRE VIA GCASH</a>
+                <a href="#" class="shop-btn">INQUIRE ON GCASH</a>
             </div>
         </div>
     </main>
 
     <footer>
-        <span class="footer-logo">JGEM STUDIO CO.</span>
-        <p style="font-size: 0.7rem; color: #888;">&copy; 2026 Crafted by 08Sebastian. Built for the Modern Maison.</p>
+        <p style="font-size: 0.7rem; letter-spacing: 2px; color: var(--brand-gold);">MADE FOR JGEM STUDIO CO.</p>
     </footer>
 
 </body>
